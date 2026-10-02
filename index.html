@@ -70,8 +70,8 @@
         }
 
         img{
-            width: 100px;
-            height: 100px;
+            width: 500px;
+            height: 500px;
         
         }
 
@@ -87,32 +87,27 @@
 
     <main>
         <div>
-            <button>🗿<span>0</span></button>
+            <img class="banner-img" src="imagem-blog.png" alt="Banner da página Green Fly Gamers com o nome do site centralizado e símbolos de videogames e filmes nas laterais sobre chamas verdes.">
+            <h2>No site vamos falar sobre animes clássicos como Black Clover, Naruto e Bleach, além de jogos como GTA, Minecraft e Roblox. Esperamos que se divirta!</h2>
+            <p>Seja bem-vindo e divirta-se!</p>
+            <p class="author">Por Leonardo</p>
+            <button>👍<span>0</span></button>
+            <button>💪<span>0</span></button>
+                
         </div>
-        <img class="banner-img" src="imagem-blog.png" alt="Banner da página Green Fly Gamers com o nome do site centralizado e símbolos de videogames e filmes nas laterais sobre chamas verdes.">
-        <h2>No site vamos falar sobre animes clássicos como Black Clover, Naruto e Bleach, além de jogos como GTA, Minecraft e Roblox. Esperamos que se divirta!</h2>
-        <p>Seja bem-vindo e divirta-se!</p>
-        <p class="author">Por Leonardo</p>
     </main>
 
 </body>
 <script>
-    const botao = document.querySelactor("button");
-     botao.addEvenlistener("click", botaoCicado); 
+    const botoes = document.querySelectorAll("main button");
+    botoes.forEach(function (botao) {
+     botao.addEventListener("click", botaoClicado); 
 
-      function botaClicado() {
+      function botaoClicado() {
         console.log("fui clicado");
         let texto = botao.querySelector ("span");
-        texto. textContent++;
-
-
-
-     }
-
-
-
-
-
+        texto.textContent++;
+     }});
 
 </script>
 </html>
